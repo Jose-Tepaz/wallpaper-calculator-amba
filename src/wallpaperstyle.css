@@ -1,6 +1,6 @@
 .wrapp-all-component-calculator {
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -40,8 +40,10 @@
 }
 
 .text-heading-calculator {
-    font-size: 20px;
+    font-size: 22px!important;
     margin: 0;
+    color: #000!important;
+    font-weight: 600!important;
 }
 
 .wrapp-input label {
@@ -49,6 +51,7 @@
     flex-direction: column;
     gap: 8px;
     align-items: flex-start;
+    color: #000!important;
 }
 
 .x-text {
@@ -67,12 +70,22 @@
 }
 
 .input-calculator {
-    height: 48px;
-    padding: 2px 8px;
-    border-radius: 8px;
-    font-size: 18px;
-    border-width: 1px;
-    width: 95%;
+    height: 48px!important;
+    padding: 2px 8px!important;
+    border-radius: 8px!important;
+    font-size: 16px!important;
+    border-width: 1px!important;
+    width: 95%!important;
+    color: #000!important;
+}
+
+.input-calculator-2 {
+    height: 48px!important;
+    padding: 2px 8px!important;
+    border-radius: 8px!important;
+    font-size: 18px!important;
+    border-width: 1px!important;
+    width: 100%!important;
 }
 
 .wrapp-radio-btn-exedente {

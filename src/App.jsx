@@ -4,6 +4,7 @@ import WallpaperCalculator from './WallpaperCalculator';
 
 function App() {
     const [showCalculator, setShowCalculator] = useState(false);
+    const [calculatorKey, setCalculatorKey] = useState(0);
 
     return (
         <div className="App">
@@ -14,23 +15,21 @@ function App() {
                 CALCULAR
             </button>
 
+            <div className={`calculator-popup ${showCalculator ? 'show' : ''}`}>
+                <button 
+                    className="close-button"
+                    onClick={() => setShowCalculator(false)}
+                >
+                    ×
+                </button>
+                <WallpaperCalculator key={calculatorKey} />
+            </div>
+
             {showCalculator && (
-                <>
-                    <div 
-                        className="calculator-overlay"
-                        onClick={() => setShowCalculator(false)}
-                    />
-                    <div className={`calculator-popup ${showCalculator ? 'show' : ''}`}>
-                        <button 
-                            className="close-button"
-                            onClick={() => setShowCalculator(false)}
-                        >
-                            ×
-                        </button>
-                        <WallpaperCalculator />
-                    </div>
-                    
-                </>
+                <div 
+                    className="calculator-overlay"
+                    onClick={() => setShowCalculator(false)}
+                />
             )}
         </div>
     );

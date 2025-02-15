@@ -84,7 +84,7 @@ const WallpaperCalculator = () => {
 
   return (
     <div className='wrapp-all-component-calculator'>
-      <h3 className='text-heading-calculator'>Calculadora de Papel Tapiz</h3>
+      <p className='text-heading-calculator'>Calculadora de Papel Tapiz</p>
       <div className='wrapp-input'>
         <label>
           Ancho del espacio (m):
@@ -102,7 +102,7 @@ const WallpaperCalculator = () => {
           (Estas son las alturas de nuestros paneles)          
         </label>
         <select
-          className='input-calculator'
+          className='input-calculator-2'
             value={selectedHeight}
             onChange={handleHeightChange}
           >
@@ -135,23 +135,27 @@ const WallpaperCalculator = () => {
       <button className='btn-calcular' onClick={handleCalculate}>Calcular</button>
       {totalArea !== null && (
         <div>
-          <h2 className='text-heading-calculator'>Área total del espacio: {totalArea.toFixed(2)} m²</h2>
+          <p className='text-heading-calculator'>Área total del espacio: {totalArea.toFixed(2)} m²</p>
         </div>
       )}
       {results.length > 0 && (
         <div>
-          <h2 className='text-heading-calculator'>Resultado:</h2>
+          <p className='text-heading-calculator'>Resultado:</p>
           
 
           <table id='resultado' className='table'>
             <tr>
-               <th>Tamaño de nuestros paneles</th>
-               <th>Paneles requeridos para tu espacio</th>
+               <th>Elije el ancho de panel de:</th>
+               <th>Elije la altura de panel de:</th>
+               <th>Necesitaras</th>
             </tr>
             {results.map(result => (
               <tr key={result.id}>
                 <th>
-                {result.width} mts x {result.height} mts
+                {result.width} mts 
+                </th>
+                <th>
+                {result.height} mts
                 </th>
                 <th>
                 {result.rolls} - Paneles

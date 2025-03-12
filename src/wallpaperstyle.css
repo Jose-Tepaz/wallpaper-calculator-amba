@@ -8,6 +8,8 @@
     gap: 20px;
     background: #fff;
     align-items: center;
+    overflow: auto;
+    padding: 20px 0px 300px 0px;
 }
 
 .wrapp-input {
@@ -29,7 +31,7 @@
 }
 
 .wrapp-input-radio label {
-    background: #f7d2c8;
+    background: #afa9a7;
     padding: 8px 8px;
     border-radius: 30px;
     max-width: 150px;
@@ -102,13 +104,14 @@
     border-radius: 30px;
     border-style: none;
     cursor: pointer;
-    background: #ce6349;
+    background: #5C5B5F;
     color: #fff;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 .btn-calcular:hover {
-    background: #df765b;
+    background: #333130;
 }
 
 .wrapp-m2 {
